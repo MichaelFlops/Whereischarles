@@ -18,8 +18,55 @@
 
 <div id='map'></div>
 <script>
+
+function sleep(millis, callback) {
+    setTimeout(callback, millis);
+}
+
+function zoomin(zoomlevel){
+	map.setView([36.05381769309918, -119.56753492355348], zoomlevel)
+	sleep("putmarker()", 1000)
+}
+
+function putmarker(){
+	var marker = L.marker([0, 0], {
+    icon: L.mapbox.marker.icon({
+        type: 'Feature',
+        geometry: {
+            type: 'Point',
+            coordinates: [36.05381769309918, -119.56753492355348]
+        },
+        properties: { }
+    })
+	});
+
+}
+
 var map = L.mapbox.map('map', 'ndvr.i689n120')
-    .setView([36.06, -119.54], 9);
+    .setView([36.05381769309918, -119.56753492355348], 2);
+
+	//map.zoom(9, true)
+
+
+// sleep(1000, "zoomin(3)")
+// sleep(1100, "zoomin(4)")
+// sleep(1200, "zoomin(5)")
+// sleep(1300, "zoomin(6)")
+// sleep(1400, "zoomin(7)")
+// sleep(1500, "zoomin(8)")
+// sleep(1600, "zoomin(9)")
+
+// sleep(1000, "zoomin(4)")
+// sleep(1300, "zoomin(6)")
+// sleep(1600, "zoomin(8)")
+sleep(1000, "zoomin(10)")
+
+
+//sleep(10, zoomin(6))
+//sleep(10, zoomin(7))
+//sleep(10, zoomin(8))
+//sleep(10, zoomin(9))
+
 </script>
 
 </body>
