@@ -2,64 +2,25 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset=utf-8 />
-<title>A Simple Map</title>
+	<meta charset=utf-8 />
+	<title>Where is Charles Manson</title>
 
-<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no' />
-<script src='https://api.tiles.mapbox.com/mapbox.js/v1.6.2/mapbox.js'></script>
-<link href='https://api.tiles.mapbox.com/mapbox.js/v1.6.2/mapbox.css' rel='stylesheet' />
-
-<style>
-  /*body { margin:0; padding:0; }*/
-  #map { position:absolute; top:0; bottom:0; width:100%; }
-</style>
+	<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no' />
+	<script src='https://api.tiles.mapbox.com/mapbox.js/v1.6.2/mapbox.js'></script>
+	<link href='https://api.tiles.mapbox.com/mapbox.js/v1.6.2/mapbox.css' rel='stylesheet' />
+	<link href='stylesheets/style.css' rel='stylesheet' />
 </head>
+
 <body>
 
-<div id='map'></div>
-<script>
+	<h1 id='title-text'> Where is Charles Manson??? </h1>
+	<h2 id='subtitle'> Click Charles to find out! </h2>
 
-function sleep(millis, callback) {
-    setTimeout(callback, millis);
-}
+	<img id='charles' src='images/manson.png' onclick="mapinit()" />
+	<div id='map'></div>
 
-function zoomin(zoomlevel){
-	map.setView([36.05381769309918, -119.56753492355348], zoomlevel)
+	<script src='javascripts/map.js'></script>
 
-}
-
-function putmarker(){
-	console.log("Hello?")
-
-}
-
-var map = L.mapbox.map('map', 'ndvr.i689n120')
-    .setView([0, 0], 2);
-
-	//map.zoom(9, true)
-
-// sleep(1000, "zoomin(3)")
-// sleep(1100, "zoomin(4)")
-// sleep(1200, "zoomin(5)")
-// sleep(1300, "zoomin(6)")
-// sleep(1400, "zoomin(7)")
-// sleep(1500, "zoomin(8)")
-// sleep(1600, "zoomin(9)")
-
-// sleep(1000, "zoomin(4)")
-// sleep(1300, "zoomin(6)")
-// sleep(1600, "zoomin(8)")
-sleep(2000, "zoomin(10)")
-//sleep(2000, "putmarker()")
-
-
-
-//sleep(10, zoomin(6))
-//sleep(10, zoomin(7))
-//sleep(10, zoomin(8))
-//sleep(10, zoomin(9))
-
-</script>
 
 </body>
 </html>

@@ -5,13 +5,30 @@ body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
-a {
-  color: #00B7FF;
-}
-
 #map { 
 	position:absolute;
-	top:0; 
-	bottom:0; 
-	width:100%; 
+	top:20px;
+	bottom:20px;
+	left:2%;
+	right:2%;
+	visibility:hidden;
+}
+
+#charles 
+{
+	display:block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 5%;
+}
+
+#title-text
+{
+	text-align: center;
+}
+
+#subtitle
+{
+	text-align: center;
+	color:gray;
 }
